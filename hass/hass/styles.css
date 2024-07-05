@@ -11,7 +11,7 @@ body {
     justify-content: space-between;
     padding: 20px;
     height: calc(100vh - 400px);
-    width: 70%;
+    width: 55%;
 
     margin: 150px 350px
 }
@@ -143,9 +143,23 @@ body {
     background-image: url('./photo/电视.jpeg');
 }
 
+.button-grid button {
+    width: 100%; /* 按钮宽度占满其父容器 */
+    padding-top: 100%; /* 按钮高度设置为宽度的100%，创建正方形 */
+    position: relative; /* 使内容绝对定位相对于按钮 */
+    /* 其他样式保持不变 */
+}
+
+/* 为每个按钮添加类选择器，确保背景图片覆盖整个按钮区域，并且保持宽高比 */
+.button1, .button2, .button3, .button4, .button5, .button6, .button7, .button8, .button9, .button10, .button11, .button12 {
+    background-size: cover; /* 背景图片覆盖整个按钮区域 */
+    background-position: center; /* 背景图片居中显示 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+}
+
 .button-grid button::after {
     content: attr(data-text);
-    position: absolute;
+    position: relative;
     bottom: 5px;
     left: 5px;
     color: white;
