@@ -1,0 +1,154 @@
+body {
+    background-color: #FF9933;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: calc(100vh - 400px);
+    width: 70%;
+
+    margin: 150px 350px
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-container h2 {
+    margin-top: 0;
+}
+
+.history-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.history-container li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.button-grid button {
+    width: 100%;
+    padding-top: 50%;
+    /* 调整为原来的一半 */
+    position: relative;
+    /* 使内容绝对定位相对于按钮 */
+    font-size: 16px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0.8;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button-grid button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+
+.button-grid button:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.button1 {
+    background-image: url('./photo/客厅1.jpg');
+}
+
+.button2 {
+    background-image: url('./photo/卧室1.jpg');
+}
+
+.button3 {
+    background-image: url('./photo/厨房1.jpg');
+}
+
+.button4 {
+    background-image: url('./photo/院子1.jpg');
+}
+
+.button5 {
+    background-image: url('./photo/客厅2.jpg');
+}
+
+.button6 {
+    background-image: url('./photo/卧室2.jpg');
+}
+
+.button7 {
+    background-image: url('./photo/厨房2.jpg');
+}
+
+.button8 {
+    background-image: url('./photo/院子2.jpg');
+}
+
+.button9 {
+    background-image: url('./photo/报警器.jpg');
+}
+
+.button10 {
+    background-image: url('./photo/门锁.jpg');
+}
+
+.button11 {
+    background-image: url('./photo/灯具1.jpg');
+}
+
+.button12 {
+    background-image: url('./photo/电视.jpeg');
+}
+
+.button-grid button::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: white;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+}
